@@ -52,11 +52,12 @@
         <img src="two.png" />
     </div>
     <div id="three">
-        <h1>Puzzle 3</h1> <input id="ithree" type="text"> <button id="bthree">check</button> </br> </br>
+        <h1>Puzzle 3</h1> <span>type the whole phrase: </span><input id="ithree" type="text"> <button id="bthree">check</button> </br> </br>
+        <div id="hint">The letters "fell" in a column directly below the spaces where they go.</div> <button id="hthree">hint</button>
         <img src="three.png" />
     </div>
     <div id="four">
-        <h1>Puzzle 4</h1> <input id="ifour" type="text"> <button id="bfour">check</button> </br> </br>
+        <h1>Puzzle 4</h1> <span>three words: </span><input id="ifour" type="text"> <button id="bfour">check</button> </br> </br>
         <img src="four.png" />
     </div>
     <div id="five">
@@ -97,15 +98,18 @@
                 }
             });
 
+            $("#hthree").click( function() {
+                $("#hint").show();
+            });
             $("#bthree").click(function () {
-                if ($("#ithree").val().toLowerCase() == "correct") {
+                if ($("#ithree").val().toLowerCase() == "do not use light switches if you smell rotten eggs") {
                     $("div").hide();
                     $("#four").show();
                 }
             });
 
             $("#bfour").click(function () {
-                if ($("#ifour").val().toLowerCase() == "correct") {
+                if ($("#ifour").val().toLowerCase() == "boiling disinfection distillation") {
                     $("div").hide();
                     $("#five").show();
                 }

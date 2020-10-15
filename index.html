@@ -9,12 +9,15 @@
     </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        img {
-            width: 100%;
+        @media only screen and (max-width: 600px) {
+            div {
+                margin: auto;
+                max-width: 80%;
+            }
         }
 
-        h1 {
-            display: inline;
+        img {
+            width: 100%;
         }
 
         input {
@@ -25,11 +28,14 @@
 
 <body>
     <div id="one">
-        <h1>Puzzle 1 </h1> <input id="ione" type="text"> <button id="bone">check</button> </br> </br>
+        <h1>Puzzle 1 </h1> <span>hidden word: </span><input id="ione" type="text"> <button id="bone">check</button>
+        </br> </br>
         <img src="one.png" />
     </div>
     <div id="two">
-        <h1>Puzzle 2</h1> <input id="itwo" type="text"> <button id="btwo">check</button> </br> </br>
+        <h1>Puzzle 2</h1> <input id="itwoa" type="text"> <input id="itwob" type="text"> <input id="itwoc" type="text">
+        <input id="itwod" type="text"> <input id="itwoe" type="text"> <input id="itwof" type="text"> <input id="itwog"
+            type="text"> <input id="itwoh" type="text"> <button id="btwo">check</button> </br> </br>
         <img src="two.png" />
     </div>
     <div id="three">
@@ -45,7 +51,8 @@
         <img src="five.png" />
     </div>
     <div id="six">
-        <h1>Puzzle 6</h1> <input id="isix" type="text"> <button id="bsix">check</button> </br> </br>
+        <h1>Puzzle 6</h1> <span>secret message: </span><input id="isix" type="text"> <button id="bsix">check</button>
+        </br> </br>
         <img src="six.png" />
     </div>
     <div id="seven">
@@ -57,42 +64,49 @@
             $("#one").show();
 
             $("#bone").click(function () {
-                if ($("#ione").val() == "correct") {
+                if ($("#ione").val().toLowerCase() == "correct") {
                     $("div").hide();
                     $("#two").show();
                 }
             });
 
             $("#btwo").click(function () {
-                if ($("#itwo").val() == "correct") {
+                if (($("#itwoa").val().toLowerCase() == "correct") && ($("#itwob").val()
+                        .toLowerCase() == "correct") && ($("#itwoc").val().toLowerCase() ==
+                    "correct") && (
+                        $("#itwod").val().toLowerCase() == "correct") && ($("#itwoe").val()
+                        .toLowerCase() == "correct") && ($("#itwof").val().toLowerCase() ==
+                    "correct") && (
+                        $("#itwog").val().toLowerCase() == "correct") && ($("#itwoh").val()
+                        .toLowerCase() == "correct")) {
                     $("div").hide();
                     $("#three").show();
                 }
             });
 
             $("#bthree").click(function () {
-                if ($("#ithree").val() == "correct") {
+                if ($("#ithree").val().toLowerCase() == "correct") {
                     $("div").hide();
                     $("#four").show();
                 }
             });
 
             $("#bfour").click(function () {
-                if ($("#ifour").val() == "correct") {
+                if ($("#ifour").val().toLowerCase() == "correct") {
                     $("div").hide();
                     $("#five").show();
                 }
             });
 
             $("#bfive").click(function () {
-                if ($("#ifive").val() == "correct") {
+                if ($("#ifive").val().toLowerCase() == "correct") {
                     $("div").hide();
                     $("#six").show();
                 }
             });
 
             $("#bsix").click(function () {
-                if ($("#isix").val() == "correct") {
+                if ($("#isix").val().toLowerCase() == "correct") {
                     $("div").hide();
                     $("#seven").show();
                 }

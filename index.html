@@ -25,37 +25,77 @@
 
 <body>
     <div id="one">
-        <h1>Puzzle 1 </h1> <input type="text"> <button>check</button>
-        <img src="one.png"/>
+        <h1>Puzzle 1 </h1> <input id="ione" type="text"> <button id="bone">check</button> </br> </br>
+        <img src="one.png" />
     </div>
     <div id="two">
-        <h1>Puzzle 2</h1> <input type="text"> <button>check</button>
-        <img src="two.png"/>
+        <h1>Puzzle 2</h1> <input id="itwo" type="text"> <button id="btwo">check</button> </br> </br>
+        <img src="two.png" />
     </div>
     <div id="three">
-        <h1>Puzzle 3</h1> <input type="text"> <button>check</button>
-        <img src="three.png"/>
+        <h1>Puzzle 3</h1> <input id="ithree" type="text"> <button id="bthree">check</button> </br> </br>
+        <img src="three.png" />
     </div>
     <div id="four">
-        <h1>Puzzle 4</h1> <input type="text"> <button>check</button>
-        <img src="four.png"/>
+        <h1>Puzzle 4</h1> <input id="ifour" type="text"> <button id="bfour">check</button> </br> </br>
+        <img src="four.png" />
     </div>
     <div id="five">
-        <h1>Puzzle 5</h1> <input type="text"> <button>check</button>
-        <img src="five.png"/>
+        <h1>Puzzle 5</h1> <input id="ifive" type="text"> <button id="bfive">check</button> </br> </br>
+        <img src="five.png" />
     </div>
     <div id="six">
-        <h1>Puzzle 6</h1> <input type="text"> <button>check</button>
-        <img src="six.png"/>
+        <h1>Puzzle 6</h1> <input id="isix" type="text"> <button id="bsix">check</button> </br> </br>
+        <img src="six.png" />
+    </div>
+    <div id="seven">
+        <h1>Congratulations!</h1>
     </div>
     <script>
         $(document).ready(function () {
             $("div").hide();
             $("#one").show();
-            $("button").click(function () {
-                $("#one").hide();
-                $("#two").show();
-            });
+            if ($("#ione").val() == "correct") {
+                $("#bone").click(function () {
+                    $("div").hide();
+                    $("#two").show();
+                });
+            }
+
+            if ($("#itwo").val() == "correct") {
+                $("#btwo").click(function () {
+                    $("div").hide();
+                    $("#three").show();
+                });
+            }
+
+            if ($("#ithree").val() == "correct") {
+                $("#bthree").click(function () {
+                    $("div").hide();
+                    $("#four").show();
+                });
+            }
+
+            if ($("#ifour").val() == "correct") {
+                $("#bfour").click(function () {
+                    $("div").hide();
+                    $("#five").show();
+                });
+            }
+
+            if ($("#ifive").val() == "correct") {
+                $("#bfive").click(function () {
+                    $("div").hide();
+                    $("#six").show();
+                });
+            }
+
+            if ($("#isix").val() == "correct") {
+                $("#bsix").click(function () {
+                    $("div").hide();
+                    $("#seven").show();
+                });
+            }
         });
     </script>
 </body>

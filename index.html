@@ -9,17 +9,25 @@
     </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Piazzolla&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Sansita+Swashed:wght@600&display=swap');
+        
         html {
-            background-color: #54577c;
-            font-family: 'Piazzolla', serif;;
+            background-color: #c4d7f2;
+        }
+        html, button, input {
+            font-family: 'Chilanka', cursive;
         }
         h1 {
-            font-family: 'Chilanka', cursive;
+            font-family: 'Sansita Swashed', cursive;
         }
         div {
             background-color: #f2efea;
-            padding: 1em;
+            padding: 3em;
+            border-radius: 15px;
+            border: 5px solid #c08552;
+        }
+        img {
+            border: 5px solid #c08552;
             border-radius: 15px;
         }
         @media only screen and (min-width: 32em) {
@@ -66,8 +74,8 @@
         <img id="imgtwo" src="two.png" />
     </div>
     <div id="three">
-        <h1>Puzzle 3</h1> <span>type the whole phrase: </span><input id="ithree" type="text"> <button id="bthree">check</button> </br> </br>
-        <div id="hint">The letters "fell" in a column directly below the spaces where they go.</div> <button id="hthree">hint</button>
+        <h1>Puzzle 3</h1> <span>type the whole phrase: </span><input id="ithree" type="text"> <button id="bthree">check</button> <button id="hthree">hint</button> <div id="hint">The letters "fell" in a column directly below the spaces where they go.</div> </br> </br>
+        
         <img id="imgthree" src="three.png" />
     </div>
     <div id="four">

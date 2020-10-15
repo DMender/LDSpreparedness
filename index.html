@@ -55,47 +55,48 @@
         $(document).ready(function () {
             $("div").hide();
             $("#one").show();
-            if ($("#ione").val() == "correct") {
-                $("#bone").click(function () {
+
+            $("#bone").click(function () {
+                if ($("#ione").val() == "correct") {
                     $("div").hide();
                     $("#two").show();
-                });
-            }
+                }
+            });
 
-            if ($("#itwo").val() == "correct") {
-                $("#btwo").click(function () {
+            $("#btwo").click(function () {
+                if ($("#itwo").val() == "correct") {
                     $("div").hide();
                     $("#three").show();
-                });
-            }
+                }
+            });
 
-            if ($("#ithree").val() == "correct") {
-                $("#bthree").click(function () {
+            $("#bthree").click(function () {
+                if ($("#ithree").val() == "correct") {
                     $("div").hide();
                     $("#four").show();
-                });
-            }
+                }
+            });
 
-            if ($("#ifour").val() == "correct") {
-                $("#bfour").click(function () {
+            $("#bfour").click(function () {
+                if ($("#ifour").val() == "correct") {
                     $("div").hide();
                     $("#five").show();
-                });
-            }
+                }
+            });
 
-            if ($("#ifive").val() == "correct") {
-                $("#bfive").click(function () {
+            $("#bfive").click(function () {
+                if ($("#ifive").val() == "correct") {
                     $("div").hide();
                     $("#six").show();
-                });
-            }
+                }
+            });
 
-            if ($("#isix").val() == "correct") {
-                $("#bsix").click(function () {
+            $("#bsix").click(function () {
+                if ($("#isix").val() == "correct") {
                     $("div").hide();
                     $("#seven").show();
-                });
-            }
+                }
+            });
         });
     </script>
 </body>

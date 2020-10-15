@@ -9,6 +9,19 @@
     </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Piazzolla&display=swap');
+        html {
+            background-color: #54577c;
+            font-family: 'Piazzolla', serif;;
+        }
+        h1 {
+            font-family: 'Chilanka', cursive;
+        }
+        div {
+            background-color: #f2efea;
+            padding: 1em;
+            border-radius: 15px;
+        }
         @media only screen and (min-width: 32em) {
             div {
                 margin: auto;
@@ -30,7 +43,7 @@
         input {
             display: inline;
         }
-        #ithree, #ifour, #ifive, #isix {
+        #ithree, #ifour, #ifivea, #ifiveb, #ifivec, #ifived, #ifivee, #ifivef, #ifiveg, #ifiveh, #ifivei, #ifivej, #isix {
             width: 100%;
         }
         #itwoa, #itwob, #itwoc, #itwod, #itwoe, #itwof, #itwog, #itwoh {
@@ -41,33 +54,34 @@
 
 <body>
     <div id="one">
-        <h1>Puzzle 1 </h1> <span>hidden word: </span><input id="ione" type="text"> <button id="bone">check</button>
+        <h1>Puzzle 1 </h1>
+        <h2>click on an image to open a printable worksheet copy</h2> <span>hidden phrase: </span><input id="ione" type="text"> <button id="bone">check</button>
         </br> </br>
-        <img src="one.png" />
+        <img id="imgone" src="one.png" />
     </div>
     <div id="two">
         <h1>Puzzle 2</h1> <span>saline: </span><input id="itwoa" type="text"> <span>bandages rolls: </span><input id="itwob" type="text"> <span>ricola: </span><input id="itwoc" type="text">
         <span>cortizone: </span><input id="itwod" type="text"> <span>blankets: </span><input id="itwoe" type="text"> <span>thermometers: </span><input id="itwof" type="text"> <span>bandaids: </span><input id="itwog"
             type="text"> <span>benedryl: </span><input id="itwoh" type="text"> <button id="btwo">check</button> </br> </br>
-        <img src="two.png" />
+        <img id="imgtwo" src="two.png" />
     </div>
     <div id="three">
         <h1>Puzzle 3</h1> <span>type the whole phrase: </span><input id="ithree" type="text"> <button id="bthree">check</button> </br> </br>
         <div id="hint">The letters "fell" in a column directly below the spaces where they go.</div> <button id="hthree">hint</button>
-        <img src="three.png" />
+        <img id="imgthree" src="three.png" />
     </div>
     <div id="four">
         <h1>Puzzle 4</h1> <span>three words: </span><input id="ifour" type="text"> <button id="bfour">check</button> </br> </br>
-        <img src="four.png" />
+        <img id="imgfour" src="four.png" />
     </div>
     <div id="five">
-        <h1>Puzzle 5</h1> <input id="ifive" type="text"> <button id="bfive">check</button> </br> </br>
-        <img src="five.png" />
+        <h1>Puzzle 5</h1> <span>type each line: </span><input id="ifivea" type="text"><input id="ifiveb" type="text"><input id="ifivec" type="text"><input id="ifived" type="text"><input id="ifivee" type="text"><input id="ifivef" type="text"><input id="ifiveg" type="text"><input id="ifiveh" type="text"><input id="ifivei" type="text"><input id="ifivej" type="text"> <button id="bfive">check</button> </br> </br>
+        <img id="imgfive" src="five.png" />
     </div>
     <div id="six">
         <h1>Puzzle 6</h1> <span>secret message: </span><input id="isix" type="text"> <button id="bsix">check</button>
         </br> </br>
-        <img src="six.png" />
+        <img id="imgsix" src="six.png" />
     </div>
     <div id="seven">
         <h1>Congratulations!</h1>
@@ -86,7 +100,7 @@
 
             $("#btwo").click(function () {
                 if (($("#itwoa").val().toLowerCase() == "2") && ($("#itwob").val()
-                        .toLowerCase() == "2") && ($("#itwoc").val().toLowerCase() ==
+                        .toLowerCase() == "4") && ($("#itwoc").val().toLowerCase() ==
                     "3") && (
                         $("#itwod").val().toLowerCase() == "2") && ($("#itwoe").val()
                         .toLowerCase() == "2") && ($("#itwof").val().toLowerCase() ==
@@ -116,17 +130,36 @@
             });
 
             $("#bfive").click(function () {
-                if ($("#ifive").val().toLowerCase() == "correct") {
+                if (($("#ifivea").val().toLowerCase() == "stay warm inside") && ($("#ifiveb").val().toLowerCase() == "avoid getting wet") && ($("#ifivec").val().toLowerCase() == "watch for numbness") && ($("#ifived").val().toLowerCase() == "let faucets drip") && ($("#ifivee").val().toLowerCase() == "ventilate after cooking") && ($("#ifivef").val().toLowerCase() == "dress in layers") && ($("#ifiveg").val().toLowerCase() == "cat litter traction") && ($("#ifiveh").val().toLowerCase() == "insulate your home") && ($("#ifivei").val().toLowerCase() == "full fuel tank") && ($("#ifivej").val().toLowerCase() == "exercise for circulation")) {
                     $("div").hide();
                     $("#six").show();
                 }
             });
 
             $("#bsix").click(function () {
-                if ($("#isix").val().toLowerCase() == "correct") {
+                if (($("#isix").val().toLowerCase() == "be prepared") || ($("#isix").val().toLowerCase() == "be prepared!")) {
                     $("div").hide();
                     $("#seven").show();
                 }
+            });
+
+            $("#imgone").click(function(){
+                popup = window.open("one.pdf","_blank");
+            });
+            $("#imgtwo").click(function(){
+                popup = window.open("two.pdf","_blank");
+            });
+            $("#imgthree").click(function(){
+                popup = window.open("three.pdf","_blank");
+            });
+            $("#imgfour").click(function(){
+                popup = window.open("four.pdf","_blank");
+            });
+            $("#imgfive").click(function(){
+                popup = window.open("five.pdf","_blank");
+            });
+            $("#imgsix").click(function(){
+                popup = window.open("six.pdf","_blank");
             });
         });
     </script>
